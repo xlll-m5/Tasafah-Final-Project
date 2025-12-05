@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>تفاصيل {{ book.title }}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* إضافة الألوان الأساسية الخاصة بنا لـ Bootstrap */
+        .bg-light-green { background-color: #D9F7D3; }
+        .text-dark-pink { color: #F7D3E5; }
+        .btn-custom { background-color: #F7D3E5; border: none; color: #333; }
+        .btn-custom:hover { background-color: #f0c3d5; }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="card shadow-sm bg-light-green">
+            <div class="card-body">
+                <h1 class="card-title">{{ book.title }}</h1>
+                <h4 class="card-subtitle mb-2 text-muted">المؤلف: {{ book.author }}</h4>
+                <p class="card-text">
+                    <strong>النوع:</strong> {{ book.genre }}<br>
+                    <strong>سنة النشر:</strong> {{ book.year }}<br>
+                </p>
+                <hr>
+                <p class="card-text">
+                    هذا المكان مخصص لوصف تفصيلي للكتاب. يمكن إضافة ملخص ونبذة عن المؤلف لإكمال التفاصيل.
+                </p>
+                <a href="{{ url_for('home') }}" class="btn btn-custom mt-3">العودة للمكتبة</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
